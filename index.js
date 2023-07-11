@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync } from "child_process";
-
-import { program } from "commander";
-
+const { program } = require("commander")
+const { execSync } = require("child_process")
 program
   .description("初始命令")
   .option("-f, --first", "first command")
@@ -16,14 +14,14 @@ program
   .description("开始了")
   .option("-r,--release", "public type")
   .action((opts, command) => {
-    const result = execSync("git add .", {
+    execSync("git add .", {
       encoding: "utf-8",
     });
-    alert(result);
 
     execSync("git commit -m fix: 提交一下");
     execSync("git pull");
     execSync("git push");
+    console.log("提交成功");
   });
 
 program.parse();
