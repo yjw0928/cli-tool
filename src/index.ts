@@ -1,5 +1,6 @@
 import { program } from "commander";
 import { execSync } from "child_process";
+import { createReactApp } from "./createReactApp";
 
 export function run() {
   program
@@ -27,5 +28,12 @@ export function run() {
       console.log("提交成功");
     });
 
-  program.parse();
+  program
+    .command("create-react-app")
+    .description("生成react项目")
+    .action(async (opts) => {
+      await createReactApp();
+      console.log("创建成功");
+    });
+  program.parseAsync();
 }
