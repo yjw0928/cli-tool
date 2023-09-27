@@ -1,15 +1,16 @@
 {
-  "name": "yjw-cli",
+  "name": "cli-tool",
   "version": "1.0.4",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "bin": {
-    "yjw-cli": "./index.js"
+    "cli-tool": "./bin/index.js"
   },
   "files": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build & tsc"
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,11 @@
     "inquirer": "^9.2.7"
   },
   "devDependencies": {
-    "vite": "^4.4.2"
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.4",
+    "@types/node": "^20.7.0",
+    "rollup": "^3.29.3",
+    "typescript": "^5.2.2"
   }
 }
