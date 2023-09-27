@@ -1,11 +1,11 @@
 {
-  "name": "cli-tool",
+  "name": "cli-tool-lib",
   "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "cli-tool": "./bin/index.js"
+    "cli-tool-lib": "./bin/index.js"
   },
   "files": [],
   "scripts": {
