@@ -17,7 +17,7 @@ export function run() {
       execSync("git add .", {
         encoding: "utf-8",
       });
-
+      console.log(process.cwd());
       execSync("git commit -am fix:'提交一下'", {
         encoding: "utf-8",
         cwd: process.cwd(),
