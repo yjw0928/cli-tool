@@ -18,7 +18,10 @@ export function run() {
         encoding: "utf-8",
       });
 
-      // execSync("git commit -m fix: 提交一下");
+      execSync("git commit -am fix:'提交一下'", {
+        encoding: "utf-8",
+        cwd: process.cwd(),
+      });
       // execSync("git pull");
       // execSync("git push");
       console.log("提交成功");
