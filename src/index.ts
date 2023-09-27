@@ -22,8 +22,8 @@ export function run() {
         encoding: "utf-8",
         cwd: process.cwd(),
       });
-      // execSync("git pull");
-      // execSync("git push");
+      execSync("git pull");
+      execSync("git push");
       console.log("提交成功");
     });
 
