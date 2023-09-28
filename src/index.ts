@@ -19,6 +19,7 @@ export function run() {
       execSync("git pull");
       execSync("git push");
       console.log("提交成功");
+      return;
     });
 
   program
