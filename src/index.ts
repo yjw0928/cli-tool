@@ -35,5 +35,5 @@ export function run() {
       await createReactApp();
       console.log("创建成功");
     });
-  program.parseAsync();
+  program.parse();
 }
