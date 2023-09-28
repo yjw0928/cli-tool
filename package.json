@@ -1,8 +1,8 @@
 {
   "name": "cli-tool-lib",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "type": "module",
   "bin": {
     "cli-tool-lib": "./bin/index.js"
@@ -15,8 +15,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup --config rollup.config.ts --configPlugin typescript"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "yangjiwen",
+  "license": "MIT",
   "dependencies": {
     "@types/inquirer": "^9.0.3",
     "commander": "^11.0.0",
