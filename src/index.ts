@@ -4,13 +4,6 @@ import { createReactApp } from "./createReactApp";
 
 export function run() {
   program
-    .description("初始命令")
-    .option("-f, --first", "first command")
-    .action(async (opts, command) => {
-      console.log(opts);
-    });
-
-  program
     .command("push")
     .description("开始了")
     .option("-r,--release", "public type")
@@ -35,5 +28,6 @@ export function run() {
       await createReactApp();
       console.log("创建成功");
     });
-  program.parse(process.argv);
+  console.log("process.argv===========>", process.argv);
+  program.parse();
 }
