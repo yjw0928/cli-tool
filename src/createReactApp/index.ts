@@ -18,5 +18,3 @@ export async function createReactApp() {
   });
   console.log(allowTs);
 }
-
-createReactApp();

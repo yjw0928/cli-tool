@@ -27,9 +27,8 @@ export function run() {
     .description("生成react项目")
     .action(async (opts, command) => {
       console.log("新建React项目");
-      // await createReactApp();
+      await createReactApp();
       console.log("创建成功");
     });
-  console.log("process.argv===========>", process.argv);
   program.parse();
 }
