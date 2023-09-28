@@ -31,7 +31,7 @@ export function run() {
   program
     .command("create-react-app")
     .description("生成react项目")
-    .action(async (opts) => {
+    .action(async (opts, command) => {
       await createReactApp();
       console.log("创建成功");
     });
