@@ -1,7 +1,7 @@
 import { program } from "commander";
 import { execSync } from "child_process";
 import { createReactApp } from "./createReactApp";
-
+import pkg from "../package.json";
 export function run() {
   program
     .command("push")
